@@ -40,6 +40,9 @@ for (const { html, target } of files) {
 
   bodyContent = bodyContent.replace(/<!--([\s\S]*?)-->/g, "{/*$1*/}");
   
+  // Remove script tags as they are not allowed in React components
+  bodyContent = bodyContent.replace(/<script[\s\S]*?<\/script>/gi, "");
+  
   bodyContent = bodyContent.replace(/xmlns:xlink=/g, "xmlnsXlink=");
   bodyContent = bodyContent.replace(/stroke-width=/g, "strokeWidth=");
   bodyContent = bodyContent.replace(/stroke-linecap=/g, "strokeLinecap=");
