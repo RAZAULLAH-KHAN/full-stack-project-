@@ -1,25 +1,8 @@
+import Link from "next/link";
+
 export default function Page() {
   return (
     <>
-
-{/* Top Navigation Bar */}
-<nav className="fixed top-0 w-full z-50 bg-[#fbf9f9]/80 backdrop-blur-md">
-<div className="flex justify-between items-center px-12 py-4 max-w-[1920px] mx-auto">
-<div className="text-2xl font-black tracking-tighter text-[#003215]">
-                Namal University
-            </div>
-<div className="hidden md:flex gap-8 items-center">
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300 ease-in-out" href="#">Academics</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300 ease-in-out" href="#">Admissions</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300 ease-in-out" href="#">Student Life</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#815600] border-b-2 border-[#815600] transition-colors duration-300 ease-in-out" href="#">Research</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300 ease-in-out" href="#">Faculty</a>
-</div>
-<button className="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2 rounded-xl text-sm font-bold tracking-tight transform transition-transform active:scale-95">
-                Apply Now
-            </button>
-</div>
-</nav>
 <main className="pt-24">
 {/* Hero Section */}
 <section className="relative h-[819px] flex items-center overflow-hidden">
@@ -36,8 +19,8 @@ export default function Page() {
                     Pioneering solutions for global challenges through rigorous inquiry and interdisciplinary innovation in the heart of rural excellence.
                 </p>
 <div className="mt-10 flex gap-6">
-<button className="bg-gradient-to-br from-secondary to-secondary-container text-on-secondary px-8 py-4 rounded-xl font-bold tracking-tight hover:shadow-xl transition-all">Explore Our Impact</button>
-<button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold tracking-tight hover:bg-white/20 transition-all">Global Partners</button>
+<Link href="/research/impact" className="bg-gradient-to-br from-secondary to-secondary-container text-on-secondary px-8 py-4 rounded-xl font-bold tracking-tight hover:shadow-xl transition-all flex justify-center items-center">Explore Our Impact</Link>
+<Link href="/research/partners" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold tracking-tight hover:bg-white/20 transition-all flex justify-center items-center">Global Partners</Link>
 </div>
 </div>
 </section>
@@ -83,7 +66,7 @@ export default function Page() {
 <div className="relative z-10">
 <h3 className="text-2xl font-bold font-headline mb-4">Digital Literacy Initiative</h3>
 <p className="text-white/70 mb-8">Bridging the urban-rural divide through accessible education technology and localized digital platforms.</p>
-<button className="bg-secondary text-on-secondary px-6 py-3 rounded-xl text-sm font-bold tracking-tight hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Project Portfolio</button>
+<Link href="/research/digital-literacy" className="bg-secondary text-on-secondary px-6 py-3 rounded-xl text-sm font-bold tracking-tight hover:bg-secondary-container hover:text-on-secondary-container transition-colors inline-block mt-4">Project Portfolio</Link>
 </div>
 <span className="material-symbols-outlined absolute -bottom-8 -right-8 text-[120px] opacity-10 rotate-12 group-hover:rotate-0 transition-transform duration-700">school</span>
 </div>
@@ -131,9 +114,9 @@ export default function Page() {
 <h2 className="font-headline text-4xl font-extrabold text-primary mb-2">Latest Publications</h2>
 <p className="text-on-surface-variant">Scholarly contributions to the global academic landscape.</p>
 </div>
-<button className="text-primary font-bold flex items-center gap-2 group">
+<Link href="/research/repository" className="text-primary font-bold flex items-center gap-2 group">
                         Explore Full Repository <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
+</Link>
 </div>
 <div className="space-y-6">
 {/* Publication Item */}
@@ -183,54 +166,13 @@ export default function Page() {
 <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">Join Our Research Ecosystem</h2>
 <p className="text-lg opacity-80 mb-10 leading-relaxed">Whether you are a prospective graduate student, a seasoned academic, or an industry leader, Namal offers a unique environment for transformative research.</p>
 <div className="flex flex-wrap justify-center gap-6">
-<button className="bg-white text-primary px-8 py-4 rounded-xl font-bold tracking-tight hover:bg-secondary-container hover:text-on-secondary-container transition-all">Apply for Fellowship</button>
-<button className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold tracking-tight hover:bg-white/10 transition-all">Industry Partnerships</button>
+<Link href="/research/fellowship" className="bg-white text-primary px-8 py-4 rounded-xl font-bold tracking-tight hover:bg-secondary-container hover:text-on-secondary-container transition-all flex items-center justify-center">Apply for Fellowship</Link>
+<Link href="/research/partnerships" className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold tracking-tight hover:bg-white/10 transition-all flex items-center justify-center">Industry Partnerships</Link>
 </div>
 </div>
 </div>
 </section>
 </main>
-{/* Footer */}
-<footer className="bg-[#f5f3f3] dark:bg-[#121212] mt-24">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 w-full max-w-[1920px] mx-auto">
-<div className="flex flex-col gap-6">
-<div className="text-xl font-bold text-[#003215] dark:text-[#fbf9f9]">Namal University</div>
-<p className="font-manrope text-sm leading-relaxed text-[#003215] opacity-70">
-                    Empowering the next generation of leaders through knowledge, research, and character building in a state-of-the-art academic environment.
-                </p>
-<div className="flex gap-4">
-<span className="material-symbols-outlined text-[#003215] cursor-pointer hover:text-[#815600] transition-colors">public</span>
-<span className="material-symbols-outlined text-[#003215] cursor-pointer hover:text-[#815600] transition-colors">share</span>
-<span className="material-symbols-outlined text-[#003215] cursor-pointer hover:text-[#815600] transition-colors">mail</span>
-</div>
-</div>
-<div>
-<h4 className="font-bold text-[#003215] mb-6 font-headline">Quick Links</h4>
-<ul className="space-y-4">
-<li><a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Contact Us</a></li>
-<li><a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Privacy Policy</a></li>
-<li><a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Careers</a></li>
-<li><a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Alumni</a></li>
-<li><a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Give to Namal</a></li>
-</ul>
-</div>
-<div>
-<h4 className="font-bold text-[#003215] mb-6 font-headline">Contact Information</h4>
-<p className="font-manrope text-sm leading-relaxed opacity-70 mb-4">
-                    30 km Talagang Road, <br/>
-                    Mianwali, Punjab, Pakistan
-                </p>
-<p className="font-manrope text-sm leading-relaxed opacity-70">
-                    Email: info@namal.edu.pk <br/>
-                    Phone: +92 459 236 100
-                </p>
-</div>
-</div>
-<div className="px-12 py-6 border-t border-outline-variant/10 text-center text-xs opacity-50 font-manrope">
-            © 2024 Namal University. All rights reserved.
-        </div>
-</footer>
-
     </>
   );
 }

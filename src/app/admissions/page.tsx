@@ -1,29 +1,8 @@
+import Link from "next/link";
+
 export default function Page() {
   return (
     <>
-
-{/* TopNavBar */}
-<nav className="fixed top-0 w-full z-50 bg-[#fbf9f9]/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm">
-<div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-<div className="text-2xl font-black text-emerald-950 dark:text-emerald-50 tracking-tighter font-headline">
-                Namal University
-            </div>
-<div className="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
-<a className="text-slate-600 hover:text-emerald-800 transition-colors" href="#">Academics</a>
-<a className="text-emerald-900 border-b-2 border-amber-500 pb-1" href="#">Admissions</a>
-<a className="text-slate-600 hover:text-emerald-800 transition-colors" href="#">Student Life</a>
-<a className="text-slate-600 hover:text-emerald-800 transition-colors" href="#">Research</a>
-<a className="text-slate-600 hover:text-emerald-800 transition-colors" href="#">Faculty</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="material-symbols-outlined text-on-surface-variant p-2 hover:bg-emerald-50/50 rounded-full transition-all">search</button>
-<button className="hero-gradient text-on-primary px-6 py-2.5 rounded-xl font-headline font-bold text-sm tracking-tight scale-95 active:opacity-80 transition-transform">
-                    Apply Now
-                </button>
-</div>
-</div>
-<div className="bg-slate-200/20 h-[1px]"></div>
-</nav>
 <main className="pt-20">
 {/* Hero Section */}
 <section className="relative h-[819px] flex items-center overflow-hidden bg-primary">
@@ -43,12 +22,12 @@ export default function Page() {
                         Step into a world-class center of excellence. We curate a learning environment that empowers the next generation of leaders and innovators.
                     </p>
 <div className="flex items-center gap-6">
-<button className="hero-gradient text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-base shadow-xl hover:scale-105 transition-transform">
+<Link href="/admissions/apply" className="hero-gradient text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-base shadow-xl hover:scale-105 transition-transform flex items-center justify-center">
                             Start Application
-                        </button>
-<button className="text-white font-headline font-bold flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        </Link>
+<Link href="/admissions/prospectus" className="text-white font-headline font-bold flex items-center gap-2 hover:translate-x-2 transition-transform">
                             View Prospectus <span className="material-symbols-outlined">arrow_forward</span>
-</button>
+</Link>
 </div>
 </div>
 </div>
@@ -197,12 +176,12 @@ export default function Page() {
                             Don't miss the opportunity to be part of a community that values knowledge, character, and social impact.
                         </p>
 <div className="flex flex-col md:flex-row gap-6 justify-center">
-<button className="bg-secondary-container text-on-secondary-container px-12 py-5 rounded-xl font-headline font-extrabold text-lg shadow-2xl hover:bg-secondary-container/90 transition-all">
+<Link href="/admissions/apply" className="bg-secondary-container text-on-secondary-container px-12 py-5 rounded-xl font-headline font-extrabold text-lg shadow-2xl hover:bg-secondary-container/90 transition-all flex items-center justify-center">
                                 Apply Now
-                            </button>
-<button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-12 py-5 rounded-xl font-headline font-extrabold text-lg hover:bg-white/20 transition-all">
+                            </Link>
+<Link href="/admissions/financial-aid" className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-12 py-5 rounded-xl font-headline font-extrabold text-lg hover:bg-white/20 transition-all flex items-center justify-center">
                                 Financial Aid Info
-                            </button>
+                            </Link>
 </div>
 <p className="text-primary-fixed text-sm mt-12 opacity-60">
                             Admission application fee: PKR 2,000 (Non-refundable)
@@ -212,53 +191,6 @@ export default function Page() {
 </div>
 </section>
 </main>
-{/* Footer */}
-<footer className="bg-[#f5f3f3] dark:bg-slate-900 border-t-0">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
-<div className="space-y-6">
-<div className="text-xl font-bold text-emerald-900 dark:text-emerald-100 font-headline">Namal University</div>
-<p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed font-body">
-                    A project of Namal Knowledge City, Mianwali. Committed to providing accessible quality education to all.
-                </p>
-<div className="flex gap-4">
-<span className="material-symbols-outlined text-emerald-900 p-2 bg-white rounded-full text-lg shadow-sm">social_leaderboard</span>
-<span className="material-symbols-outlined text-emerald-900 p-2 bg-white rounded-full text-lg shadow-sm">alternate_email</span>
-<span className="material-symbols-outlined text-emerald-900 p-2 bg-white rounded-full text-lg shadow-sm">rss_feed</span>
-</div>
-</div>
-<div className="space-y-6">
-<h4 className="font-headline font-bold text-emerald-900">Quick Links</h4>
-<ul className="space-y-3 font-body text-sm">
-<li><a className="text-slate-500 hover:underline hover:text-emerald-700 transition-all" href="#">Contact Us</a></li>
-<li><a className="text-slate-500 hover:underline hover:text-emerald-700 transition-all" href="#">Privacy Policy</a></li>
-<li><a className="text-slate-500 hover:underline hover:text-emerald-700 transition-all" href="#">Campus Map</a></li>
-<li><a className="text-slate-500 hover:underline hover:text-emerald-700 transition-all" href="#">Alumni</a></li>
-<li><a className="text-slate-500 hover:underline hover:text-emerald-700 transition-all" href="#">Careers</a></li>
-</ul>
-</div>
-<div className="space-y-6">
-<h4 className="font-headline font-bold text-emerald-900">Contact Us</h4>
-<div className="space-y-4 text-sm text-slate-500">
-<div className="flex items-start gap-3">
-<span className="material-symbols-outlined text-emerald-900">location_on</span>
-<p>30 KM Talagang Road, Mianwali, Pakistan</p>
-</div>
-<div className="flex items-start gap-3">
-<span className="material-symbols-outlined text-emerald-900">call</span>
-<p>+92 459 236 312</p>
-</div>
-<div className="flex items-start gap-3">
-<span className="material-symbols-outlined text-emerald-900">mail</span>
-<p>admissions@namal.edu.pk</p>
-</div>
-</div>
-</div>
-</div>
-<div className="max-w-screen-2xl mx-auto px-12 py-8 border-t border-slate-200">
-<p className="text-slate-500 dark:text-slate-400 text-sm font-body">© 2024 Namal University. Knowledge for All.</p>
-</div>
-</footer>
-
     </>
   );
 }

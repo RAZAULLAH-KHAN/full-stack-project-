@@ -1,28 +1,8 @@
+import Link from "next/link";
+
 export default function Page() {
   return (
     <>
-
-{/* TopNavBar */}
-<nav className="fixed top-0 w-full z-50 bg-[#fbf9f9]/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm">
-<div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-<div className="text-2xl font-black text-emerald-950 dark:text-emerald-50 tracking-tighter font-headline">Namal University</div>
-<div className="hidden md:flex items-center space-x-8">
-<a className="text-emerald-900 dark:text-emerald-400 border-b-2 border-amber-500 pb-1 font-headline font-bold tracking-tight" href="#">Academics</a>
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-bold tracking-tight" href="#">Admissions</a>
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-bold tracking-tight" href="#">Student Life</a>
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-bold tracking-tight" href="#">Research</a>
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-bold tracking-tight" href="#">Faculty</a>
-</div>
-<div className="flex items-center gap-6">
-<div className="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant/15">
-<span className="material-symbols-outlined text-on-surface-variant mr-2" data-icon="search">search</span>
-<input className="bg-transparent border-none focus:ring-0 text-sm w-40 font-body" placeholder="Search programs..." type="text"/>
-</div>
-<button className="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-headline font-bold scale-95 active:opacity-80 transition-transform shadow-sm">Apply Now</button>
-</div>
-</div>
-<div className="bg-slate-200/20 dark:bg-slate-800/20 h-[1px]"></div>
-</nav>
 <main className="pt-24">
 {/* Hero Section */}
 <section className="px-8 py-20 max-w-screen-2xl mx-auto">
@@ -36,13 +16,13 @@ export default function Page() {
                         At Namal University, we bridge the gap between rural potential and global opportunity. Explore our rigorous academic programs designed to shape the leaders of tomorrow.
                     </p>
 <div className="flex gap-4">
-<button className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 group transition-all">
+<Link href="/academics/programs" className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 group transition-all">
                             Explore All Programs
                             <span className="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
-</button>
-<button className="bg-surface-container-high text-on-primary-fixed-variant px-8 py-4 rounded-xl font-bold">
+</Link>
+<Link href="/academics/prospectus" className="bg-surface-container-high text-on-primary-fixed-variant px-8 py-4 rounded-xl font-bold flex items-center justify-center">
                             Download Prospectus
-                        </button>
+                        </Link>
 </div>
 </div>
 <div className="col-span-12 lg:col-span-5 relative">
@@ -62,9 +42,9 @@ export default function Page() {
 <div className="flex items-center justify-between mb-12">
 <h2 className="text-4xl font-black font-headline tracking-tight text-primary">Featured Program</h2>
 <div className="h-[1px] flex-grow mx-8 bg-outline-variant/30 hidden md:block"></div>
-<a className="text-secondary font-bold flex items-center gap-1 hover:underline" href="#">
+<Link className="text-secondary font-bold flex items-center gap-1 hover:underline" href="/academics/bs-cs">
                         View Details <span className="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
-</a>
+</Link>
 </div>
 <div className="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-2 group border border-outline-variant/10">
 <div className="p-12 flex flex-col justify-center">
@@ -90,10 +70,10 @@ export default function Page() {
 <p className="text-xs text-on-surface-variant font-medium">Opportunities</p>
 </div>
 </div>
-<button className="hero-gradient text-on-primary w-fit px-10 py-4 rounded-xl font-bold flex items-center gap-2">
+<Link href="/academics/bs-cs/syllabus" className="hero-gradient text-on-primary w-fit px-10 py-4 rounded-xl font-bold flex items-center gap-2">
                             Program Syllabus
                             <span className="material-symbols-outlined" data-icon="description">description</span>
-</button>
+</Link>
 </div>
 <div className="relative min-h-[400px]">
 <img alt="Computer Science" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A focused student working on a laptop in a modern, well-lit computer lab with code reflected on glass surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-Ak2MUUSlPc9sr59A1v6iogAGsh7VTFdLZGfIrtoCevXCgEQbdkG7h6iTdR3zwVrwGjJJTZxR6P20phIerhodpm4V1_MM-n5rpkqmPmbg5sGOR35ZvglLM2M4nCnJ-PrGOTfATb1Cg5bavbXUIuB4ExM6vXmBgJkqeMDKbj6YUzcCKk6zhADBNp0FZyF-yF6Q1qtCd7-HLUY41FbfRaBrDMs0CTe3Egb7idRkmtQm7-Jhapw1Pcz5kJ_DWu1xZfVfjjjQMHTK"/>
@@ -125,9 +105,9 @@ export default function Page() {
 <span className="w-1.5 h-1.5 bg-secondary rounded-full"></span> MS Engineering Mgmt.
                         </li>
 </ul>
-<a className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<Link className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="/faculty">
                         Explore Faculty <span className="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
-</a>
+</Link>
 </div>
 {/* Computer Science */}
 <div className="bg-surface-container-low p-8 rounded-3xl hover:bg-surface-container transition-colors group">
@@ -146,9 +126,9 @@ export default function Page() {
 <span className="w-1.5 h-1.5 bg-secondary rounded-full"></span> MS Data Science
                         </li>
 </ul>
-<a className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<Link className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="/faculty">
                         Explore Faculty <span className="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
-</a>
+</Link>
 </div>
 {/* Business */}
 <div className="bg-surface-container-low p-8 rounded-3xl hover:bg-surface-container transition-colors group">
@@ -167,9 +147,9 @@ export default function Page() {
 <span className="w-1.5 h-1.5 bg-secondary rounded-full"></span> BS Agri-Business
                         </li>
 </ul>
-<a className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<Link className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="/faculty">
                         Explore Faculty <span className="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
-</a>
+</Link>
 </div>
 {/* Social Sciences */}
 <div className="bg-surface-container-low p-8 rounded-3xl hover:bg-surface-container transition-colors group">
@@ -188,9 +168,9 @@ export default function Page() {
 <span className="w-1.5 h-1.5 bg-secondary rounded-full"></span> BS Sociology
                         </li>
 </ul>
-<a className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<Link className="text-primary font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="/faculty">
                         Explore Faculty <span className="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
-</a>
+</Link>
 </div>
 </div>
 </section>
@@ -224,57 +204,6 @@ export default function Page() {
 </div>
 </section>
 </main>
-{/* Footer */}
-<footer className="bg-[#f5f3f3] dark:bg-slate-900 border-t-0">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
-<div>
-<div className="text-xl font-bold text-emerald-900 dark:text-emerald-100 mb-6 font-headline">Namal University</div>
-<p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8">
-                    Empowering the youth through quality education and research. Established with a vision to provide world-class opportunities for all.
-                </p>
-<div className="flex gap-4">
-<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
-<span className="material-symbols-outlined" data-icon="public">public</span>
-</a>
-<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
-<span className="material-symbols-outlined" data-icon="share">share</span>
-</a>
-</div>
-</div>
-<div className="grid grid-cols-2 gap-8">
-<div>
-<h6 className="font-bold text-emerald-900 dark:text-emerald-400 mb-4 text-sm">Quick Links</h6>
-<ul className="space-y-3">
-<li><a className="text-slate-500 dark:text-slate-400 text-sm hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Contact Us</a></li>
-<li><a className="text-slate-500 dark:text-slate-400 text-sm hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Campus Map</a></li>
-<li><a className="text-slate-500 dark:text-slate-400 text-sm hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Alumni</a></li>
-<li><a className="text-slate-500 dark:text-slate-400 text-sm hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Careers</a></li>
-</ul>
-</div>
-<div>
-<h6 className="font-bold text-emerald-900 dark:text-emerald-400 mb-4 text-sm">Legal</h6>
-<ul className="space-y-3">
-<li><a className="text-slate-500 dark:text-slate-400 text-sm hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Privacy Policy</a></li>
-<li><a className="text-slate-500 dark:text-slate-400 text-sm hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Terms of Service</a></li>
-</ul>
-</div>
-</div>
-<div>
-<h6 className="font-bold text-emerald-900 dark:text-emerald-400 mb-4 text-sm">Newsletter</h6>
-<p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Stay updated with academic news and events.</p>
-<div className="flex">
-<input className="bg-surface-container-highest border-none rounded-l-xl px-4 py-2 w-full text-sm" placeholder="Email address" type="email"/>
-<button className="bg-primary text-on-primary px-4 py-2 rounded-r-xl">
-<span className="material-symbols-outlined" data-icon="send">send</span>
-</button>
-</div>
-</div>
-</div>
-<div className="px-12 py-8 max-w-screen-2xl mx-auto border-t border-outline-variant/10 text-center md:text-left">
-<span className="text-slate-500 dark:text-slate-400 text-sm">© 2024 Namal University. Knowledge for All.</span>
-</div>
-</footer>
-
     </>
   );
 }

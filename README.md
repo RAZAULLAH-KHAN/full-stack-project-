@@ -46,3 +46,7 @@ A modern, responsive university website built with Next.js 15, React 19, and Tai
 4.  **Open the app**:
     Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
+## 🏗️ Architecture Updates
+
+- **Centralized Layout**: The application leverages Next.js 15 App Router `layout.tsx` to handle global components like the `Header` and `Footer`, significantly reducing code duplication across pages.
+- **Client-Side Routing**: All internal application links have been upgraded to functional `Link` components from `next/link` to provide instantaneous client-side navigation without full-page reloads.

@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 
+import Link from "next/link";
+
 export default function Page() {
   useEffect(() => {
     document.querySelectorAll('[data-filter]').forEach(button => {
@@ -30,30 +32,6 @@ export default function Page() {
 
   return (
     <>
-
-{/* TopNavBar */}
-<nav className="fixed top-0 w-full z-50 bg-[#fbf9f9]/80 backdrop-blur-md">
-<div className="flex justify-between items-center px-12 py-4 max-w-[1920px] mx-auto">
-<div className="text-2xl font-black tracking-tighter text-[#003215]">
-                Namal University
-            </div>
-<div className="hidden md:flex items-center space-x-8">
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Academics</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Admissions</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Student Life</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Research</a>
-<a className="font-manrope tracking-tight font-bold uppercase text-sm text-[#815600] border-b-2 border-[#815600]" href="#">Faculty</a>
-</div>
-<div className="flex items-center space-x-6">
-<button className="transition-transform duration-200 active:scale-95">
-<span className="material-symbols-outlined text-[#003215]">search</span>
-</button>
-<button className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-manrope font-bold uppercase text-xs tracking-widest transition-all hover:shadow-lg active:scale-95">
-                    Apply Now
-                </button>
-</div>
-</div>
-</nav>
 <main className="pt-32 pb-24 px-12 max-w-[1920px] mx-auto">
 {/* Hero Section: Editorial Header */}
 <header className="editorial-grid mb-24">
@@ -165,10 +143,10 @@ export default function Page() {
                                 Policy Analysis
                             </li>
 </ul>
-<button className="mt-8 text-primary font-bold text-xs uppercase tracking-widest flex items-center group/btn hover:text-secondary transition-colors">
+<Link href="/faculty/publications" className="mt-8 text-primary font-bold text-xs uppercase tracking-widest flex items-center group/btn hover:text-secondary transition-colors">
                             View Publications
                             <span className="material-symbols-outlined ml-2 text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
-</button>
+</Link>
 </div>
 </div>
 </div>
@@ -245,46 +223,17 @@ export default function Page() {
                         We are always seeking visionary educators and researchers to join our world-class faculty. Explore open positions and research fellowships.
                     </p>
 <div className="flex flex-wrap justify-center gap-4">
-<button className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:scale-105 transition-transform">
+<Link href="/careers" className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:scale-105 transition-transform flex items-center justify-center">
                             View Open Roles
-                        </button>
-<button className="border border-outline-variant text-on-primary px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:bg-on-primary/10 transition-colors">
+                        </Link>
+<Link href="/research/fellowship" className="border border-outline-variant text-on-primary px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:bg-on-primary/10 transition-colors flex items-center justify-center">
                             Research Fellows
-                        </button>
+                        </Link>
 </div>
 </div>
 </div>
 </section>
 </main>
-{/* Footer */}
-<footer className="bg-[#f5f3f3] text-[#003215] border-t border-outline-variant/10">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 w-full max-w-[1920px] mx-auto">
-<div data-department="engineering">
-<div className="text-xl font-bold text-[#003215] mb-6">Namal University</div>
-<p className="font-manrope text-sm leading-relaxed opacity-70 max-w-xs">
-                    Inspiring the next generation of knowledge seekers and ethical leaders in the heart of Mianwali.
-                </p>
-</div>
-<div className="flex flex-col space-y-4" data-department="computer-science">
-<span className="font-manrope font-bold uppercase text-xs tracking-widest text-[#815600]">Quick Links</span>
-<a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Contact Us</a>
-<a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Privacy Policy</a>
-<a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Careers</a>
-<a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Alumni</a>
-<a className="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Give to Namal</a>
-</div>
-<div className="flex flex-col items-start md:items-end" data-department="social-sciences">
-<div className="flex space-x-4 mb-8">
-<span className="material-symbols-outlined text-xl opacity-70 hover:opacity-100 cursor-pointer">social_leaderboard</span>
-<span className="material-symbols-outlined text-xl opacity-70 hover:opacity-100 cursor-pointer">public</span>
-<span className="material-symbols-outlined text-xl opacity-70 hover:opacity-100 cursor-pointer">group</span>
-</div>
-<p className="font-manrope text-sm opacity-70 text-right">
-                    © 2024 Namal University. All rights reserved.
-                </p>
-</div>
-</div>
-</footer>
     </>
   );
 }

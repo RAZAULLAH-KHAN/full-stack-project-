@@ -1,32 +1,8 @@
+import Link from "next/link";
+
 export default function Page() {
   return (
     <>
-
-{/* TopNavBar */}
-<nav className="fixed top-0 w-full z-50 bg-[#fbf9f9]/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-<div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-<div className="text-2xl font-black text-emerald-950 dark:text-emerald-50 tracking-tighter font-headline">
-                Namal University
-            </div>
-<div className="hidden md:flex items-center space-x-8 font-headline font-bold tracking-tight">
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Academics</a>
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Admissions</a>
-<a className="text-emerald-900 dark:text-emerald-400 border-b-2 border-amber-500 pb-1" href="#">Student Life</a>
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Research</a>
-<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Faculty</a>
-</div>
-<div className="flex items-center gap-6">
-<div className="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant/15">
-<span className="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
-<input className="bg-transparent border-none focus:ring-0 text-sm w-32 font-body" placeholder="Search campus..." type="text"/>
-</div>
-<button className="hero-gradient text-on-primary px-6 py-2.5 rounded-xl font-headline font-bold tracking-tight scale-95 active:opacity-80 transition-transform shadow-lg shadow-primary/20">
-                    Apply Now
-                </button>
-</div>
-</div>
-<div className="bg-slate-200/20 dark:bg-slate-800/20 h-[1px]"></div>
-</nav>
 <main className="pt-20">
 {/* Hero Section: Editorial Style */}
 <section className="relative h-[870px] flex items-center overflow-hidden">
@@ -44,8 +20,8 @@ export default function Page() {
                         At Namal, education is lived, not just learned. Join a community that celebrates diversity, sparks innovation, and builds lifelong bonds.
                     </p>
 <div className="flex gap-4 pt-4">
-<button className="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-secondary/90 transition-all">Explore Clubs</button>
-<button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-white/20 transition-all">Student Stories</button>
+<Link href="/student-life/clubs" className="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-secondary/90 transition-all flex items-center justify-center">Explore Clubs</Link>
+<Link href="/student-life/stories" className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center">Student Stories</Link>
 </div>
 </div>
 </div>
@@ -58,9 +34,9 @@ export default function Page() {
 <h2 className="text-4xl md:text-5xl font-headline font-extrabold tracking-tight text-primary">Vibrant Communities</h2>
 <p className="text-on-surface-variant max-w-lg text-lg">From high-stakes debating to building the next generation of robotics, find your tribe among 50+ student-led organizations.</p>
 </div>
-<button className="text-secondary font-headline font-bold flex items-center gap-2 hover:underline">
+<Link href="/student-life/clubs" className="text-secondary font-headline font-bold flex items-center gap-2 hover:underline">
                         View All Clubs <span className="material-symbols-outlined">arrow_forward</span>
-</button>
+</Link>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px]">
 {/* Robotics */}
@@ -115,9 +91,9 @@ export default function Page() {
 <h4 className="font-headline font-bold text-primary">Interactive Map</h4>
 </div>
 <p className="text-sm text-on-surface-variant leading-relaxed">Experience our state-of-the-art labs and social spaces from anywhere in the world.</p>
-<button className="mt-4 text-secondary font-bold text-sm flex items-center gap-1 group">
+<Link href="/student-life/interactive-map" className="mt-4 text-secondary font-bold text-sm flex items-center gap-1 group">
                             Start Tour <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
-</button>
+</Link>
 </div>
 </div>
 <div className="order-1 md:order-2 space-y-8">
@@ -244,59 +220,6 @@ export default function Page() {
 </div>
 </section>
 </main>
-{/* Footer */}
-<footer className="bg-[#f5f3f3] dark:bg-slate-900 w-full border-t-0">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
-<div className="space-y-6">
-<div className="text-xl font-bold text-emerald-900 dark:text-emerald-100 font-headline">Namal University</div>
-<p className="text-slate-500 dark:text-slate-400 font-body text-sm leading-relaxed max-w-xs">
-                    Empowering the next generation of leaders with knowledge, ethics, and innovation. Knowledge for All.
-                </p>
-<div className="flex gap-4">
-<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
-<span className="material-symbols-outlined text-lg">public</span>
-</a>
-<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
-<span className="material-symbols-outlined text-lg">alternate_email</span>
-</a>
-<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
-<span className="material-symbols-outlined text-lg">campaign</span>
-</a>
-</div>
-</div>
-<div className="grid grid-cols-2 gap-8">
-<div className="space-y-4">
-<h5 className="text-emerald-900 dark:text-emerald-400 font-headline font-bold text-sm uppercase tracking-wider">Quick Links</h5>
-<ul className="space-y-2 font-body text-sm">
-<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Contact Us</a></li>
-<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Privacy Policy</a></li>
-<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Campus Map</a></li>
-</ul>
-</div>
-<div className="space-y-4">
-<h5 className="text-emerald-900 dark:text-emerald-400 font-headline font-bold text-sm uppercase tracking-wider">Connect</h5>
-<ul className="space-y-2 font-body text-sm">
-<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Alumni</a></li>
-<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Careers</a></li>
-</ul>
-</div>
-</div>
-<div className="space-y-6">
-<h5 className="text-emerald-900 dark:text-emerald-400 font-headline font-bold text-sm uppercase tracking-wider">Newsletter</h5>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-body">Stay updated with campus life and events.</p>
-<div className="flex">
-<input className="bg-surface-container-high border-none rounded-l-xl focus:ring-secondary px-4 py-2 text-sm flex-grow font-body" placeholder="Email address" type="email"/>
-<button className="bg-primary text-white rounded-r-xl px-4 flex items-center justify-center">
-<span className="material-symbols-outlined">send</span>
-</button>
-</div>
-<div className="pt-4 text-xs text-slate-500 dark:text-slate-400 font-body">
-                    © 2024 Namal University. Knowledge for All.
-                </div>
-</div>
-</div>
-</footer>
-
     </>
   );
 }
