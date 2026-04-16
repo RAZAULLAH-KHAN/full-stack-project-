@@ -13,6 +13,7 @@ import bcrypt from "bcryptjs";
  */
 export const { auth, signIn, signOut, handlers } = NextAuth({
   ...authConfig,
+  trustHost: true,
   providers: [
     Credentials({
       name: "Student ID",
