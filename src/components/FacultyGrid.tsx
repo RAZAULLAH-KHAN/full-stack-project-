@@ -62,36 +62,36 @@ export default function FacultyGrid({
   return (
     <>
       {/* Search & Filter Bar */}
-      <section className="mb-16 bg-surface-container-low rounded-xl p-4 flex flex-wrap items-center justify-between gap-6">
-        <div className="flex-1 min-w-[300px] relative">
+      <section className="mb-12 md:mb-16 bg-surface-container-low rounded-xl p-4 md:p-6 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6">
+        <div className="flex-1 relative">
           <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">
             search
           </span>
           <input
-            className="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-secondary-container transition-all placeholder:text-outline-variant font-label text-sm"
-            placeholder="Search by name or research interest..."
+            className="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-secondary-container transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
+            placeholder="Search faculty..."
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 lg:pb-0 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
           <button
-            className={`px-6 py-2.5 rounded-full text-xs font-bold font-label uppercase tracking-wider transition-colors ${
+            className={`px-6 py-2.5 rounded-full text-[10px] md:text-xs font-bold font-label uppercase tracking-wider transition-colors whitespace-nowrap ${
               filter === "all"
-                ? "bg-primary text-on-primary"
+                ? "bg-primary text-on-primary shadow-lg shadow-primary/20"
                 : "bg-surface-container-highest text-on-surface-variant hover:bg-surface-dim"
             }`}
             onClick={() => setFilter("all")}
           >
-            All
+            All Departments
           </button>
           {departments.map((dept) => (
             <button
               key={dept}
-              className={`px-6 py-2.5 rounded-full text-xs font-bold font-label uppercase tracking-wider whitespace-nowrap transition-colors ${
+              className={`px-6 py-2.5 rounded-full text-[10px] md:text-xs font-bold font-label uppercase tracking-wider whitespace-nowrap transition-colors ${
                 filter === dept
-                  ? "bg-primary text-on-primary"
+                  ? "bg-primary text-on-primary shadow-lg shadow-primary/20"
                   : "bg-surface-container-highest text-on-surface-variant hover:bg-surface-dim"
               }`}
               onClick={() => setFilter(dept)}

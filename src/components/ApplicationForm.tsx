@@ -20,12 +20,12 @@ export default function ApplicationForm() {
   >(submitApplication, null);
 
   return (
-    <div className="bg-surface-container-lowest rounded-2xl shadow-xl p-10 md:p-14">
-      <h3 className="font-headline font-extrabold text-3xl text-primary mb-2">
+    <div className="bg-surface-container-lowest rounded-2xl shadow-xl p-6 sm:p-10 md:p-14">
+      <h3 className="font-headline font-extrabold text-2xl md:text-3xl text-primary mb-2">
         Apply Now
       </h3>
-      <p className="text-on-surface-variant mb-8">
-        Fill out the form below to start your application.
+      <p className="text-on-surface-variant mb-8 text-sm md:text-base leading-relaxed">
+        Fill out the form below to start your application properly.
       </p>
 
       {/* Success Message */}
@@ -67,13 +67,13 @@ export default function ApplicationForm() {
         </div>
       )}
 
-      <form action={formAction} className="space-y-6">
+      <form action={formAction} className="space-y-5 md:space-y-6">
         {/* Name Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           <div>
             <label
               htmlFor="firstName"
-              className="block text-sm font-bold text-on-surface mb-2"
+              className="block text-xs md:text-sm font-bold text-on-surface mb-2"
             >
               First Name <span className="text-red-500">*</span>
             </label>
@@ -82,11 +82,11 @@ export default function ApplicationForm() {
               id="firstName"
               name="firstName"
               required
-              className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
+              className="w-full px-4 py-2.5 md:py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
               placeholder="Enter your first name"
             />
             {state?.errors?.firstName && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-red-500 text-[10px] md:text-xs mt-1">
                 {state.errors.firstName}
               </p>
             )}
@@ -94,7 +94,7 @@ export default function ApplicationForm() {
           <div>
             <label
               htmlFor="lastName"
-              className="block text-sm font-bold text-on-surface mb-2"
+              className="block text-xs md:text-sm font-bold text-on-surface mb-2"
             >
               Last Name <span className="text-red-500">*</span>
             </label>
@@ -103,11 +103,11 @@ export default function ApplicationForm() {
               id="lastName"
               name="lastName"
               required
-              className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
+              className="w-full px-4 py-2.5 md:py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
               placeholder="Enter your last name"
             />
             {state?.errors?.lastName && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-red-500 text-[10px] md:text-xs mt-1">
                 {state.errors.lastName}
               </p>
             )}
@@ -115,11 +115,11 @@ export default function ApplicationForm() {
         </div>
 
         {/* Email & Phone */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-bold text-on-surface mb-2"
+              className="block text-xs md:text-sm font-bold text-on-surface mb-2"
             >
               Email Address <span className="text-red-500">*</span>
             </label>
@@ -128,11 +128,11 @@ export default function ApplicationForm() {
               id="email"
               name="email"
               required
-              className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
+              className="w-full px-4 py-2.5 md:py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
               placeholder="you@example.com"
             />
             {state?.errors?.email && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-red-500 text-[10px] md:text-xs mt-1">
                 {state.errors.email}
               </p>
             )}
@@ -140,7 +140,7 @@ export default function ApplicationForm() {
           <div>
             <label
               htmlFor="phone"
-              className="block text-sm font-bold text-on-surface mb-2"
+              className="block text-xs md:text-sm font-bold text-on-surface mb-2"
             >
               Phone Number <span className="text-red-500">*</span>
             </label>
@@ -149,11 +149,11 @@ export default function ApplicationForm() {
               id="phone"
               name="phone"
               required
-              className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
+              className="w-full px-4 py-2.5 md:py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface"
               placeholder="+92-300-1234567"
             />
             {state?.errors?.phone && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-red-500 text-[10px] md:text-xs mt-1">
                 {state.errors.phone}
               </p>
             )}
@@ -164,7 +164,7 @@ export default function ApplicationForm() {
         <div>
           <label
             htmlFor="programOfInterest"
-            className="block text-sm font-bold text-on-surface mb-2"
+            className="block text-xs md:text-sm font-bold text-on-surface mb-2"
           >
             Program of Interest <span className="text-red-500">*</span>
           </label>
@@ -172,7 +172,7 @@ export default function ApplicationForm() {
             id="programOfInterest"
             name="programOfInterest"
             required
-            className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all font-label text-sm text-on-surface"
+            className="w-full px-4 py-2.5 md:py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all font-label text-sm text-on-surface appearance-none"
           >
             <option value="">Select a program...</option>
             {programs.map((program) => (
@@ -182,7 +182,7 @@ export default function ApplicationForm() {
             ))}
           </select>
           {state?.errors?.programOfInterest && (
-            <p className="text-red-500 text-xs mt-1">
+            <p className="text-red-500 text-[10px] md:text-xs mt-1">
               {state.errors.programOfInterest}
             </p>
           )}
@@ -192,7 +192,7 @@ export default function ApplicationForm() {
         <div>
           <label
             htmlFor="previousEducation"
-            className="block text-sm font-bold text-on-surface mb-2"
+            className="block text-xs md:text-sm font-bold text-on-surface mb-2"
           >
             Previous Education <span className="text-red-500">*</span>
           </label>
@@ -202,10 +202,10 @@ export default function ApplicationForm() {
             rows={4}
             required
             className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all placeholder:text-outline-variant font-label text-sm text-on-surface resize-none"
-            placeholder="Describe your previous education (e.g., FSc Pre-Engineering from Punjab College, GPA 3.8)"
+            placeholder="Describe your previous education"
           />
           {state?.errors?.previousEducation && (
-            <p className="text-red-500 text-xs mt-1">
+            <p className="text-red-500 text-[10px] md:text-xs mt-1">
               {state.errors.previousEducation}
             </p>
           )}
@@ -215,36 +215,23 @@ export default function ApplicationForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="w-full hero-gradient text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-lg shadow-xl hover:scale-[1.02] transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-3"
+          className="w-full hero-gradient text-on-primary px-6 py-4 rounded-xl font-headline font-bold text-base md:text-lg shadow-xl active:scale-[0.98] transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-3"
         >
           {isPending ? (
-            <>
+            <div className="flex items-center gap-2">
               <svg
-                className="animate-spin h-5 w-5 text-on-primary"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                className="animate-spin h-5 w-5"
                 viewBox="0 0 24 24"
               >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                />
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                />
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
-              Submitting Application...
-            </>
+              <span>Processing...</span>
+            </div>
           ) : (
             <>
               <span className="material-symbols-outlined">send</span>
-              Submit Application
+              <span>Submit Application</span>
             </>
           )}
         </button>
