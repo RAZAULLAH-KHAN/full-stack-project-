@@ -39,9 +39,9 @@ export default function Header() {
           })}
         </nav>
         <div className="flex items-center gap-6">
-          <button className="material-symbols-outlined text-on-surface hover:bg-emerald-50/50 p-2 rounded-full transition-all" aria-label="Search">
+          <Link href="/search" className="material-symbols-outlined text-on-surface hover:bg-emerald-50/50 p-2 rounded-full transition-all" aria-label="Search">
             search
-          </button>
+          </Link>
           <Link
             href="/admissions"
             className="primary-cta-gradient text-white px-6 py-2.5 rounded-xl font-headline font-bold text-sm active:opacity-80 transition-all hover:opacity-90 shadow-sm"

@@ -1,16 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: '/Namal-website',
-  images: {
-    unoptimized: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  distDir: '.next-dev',
   typescript: {
-    ignoreBuildErrors: true, 
-  }
+    ignoreBuildErrors: true,
+  },
 };
 export default nextConfig;

@@ -36,8 +36,8 @@ export default function Footer() {
             <ul className="space-y-3 font-body text-sm">
               <li><Link className="text-slate-500 hover:underline hover:text-emerald-700 transition-colors" href="/student-life">Student Life</Link></li>
               <li><Link className="text-slate-500 hover:underline hover:text-emerald-700 transition-colors" href="/portal">Student Portal</Link></li>
-              <li><a className="text-slate-500 hover:underline hover:text-emerald-700 transition-colors" href="#">Alumni</a></li>
-              <li><a className="text-slate-500 hover:underline hover:text-emerald-700 transition-colors" href="#">Careers</a></li>
+              <li><Link className="text-slate-500 hover:underline hover:text-emerald-700 transition-colors" href="/alumni">Alumni</Link></li>
+              <li><Link className="text-slate-500 hover:underline hover:text-emerald-700 transition-colors" href="/careers">Careers</Link></li>
             </ul>
           </div>
         </div>
@@ -46,16 +46,16 @@ export default function Footer() {
         <div className="space-y-6">
           <h5 className="font-headline font-bold text-emerald-900 uppercase text-xs tracking-widest">Newsletter</h5>
           <p className="text-slate-500 font-body text-sm">Subscribe to get the latest research updates and news.</p>
-          <div className="flex">
+          <form action="/newsletter-subscribe" className="flex">
             <input
               className="bg-surface-container-high border-none rounded-l-xl px-4 py-3 w-full text-sm focus:ring-1 focus:ring-secondary outline-none"
               placeholder="Your email"
               type="email"
             />
-            <button className="bg-emerald-900 text-white px-4 py-3 rounded-r-xl material-symbols-outlined hover:bg-emerald-800 transition-colors">
+            <button type="submit" className="bg-emerald-900 text-white px-4 py-3 rounded-r-xl material-symbols-outlined hover:bg-emerald-800 transition-colors">
               send
             </button>
-          </div>
+          </form>
           <div className="space-y-2 text-sm text-slate-500">
             <div className="flex items-start gap-2">
               <span className="material-symbols-outlined text-emerald-900 text-base mt-0.5">location_on</span>

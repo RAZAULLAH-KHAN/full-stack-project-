@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ApplicationForm from "@/components/ApplicationForm";
 
 export default function Page() {
   return (
@@ -160,6 +161,48 @@ export default function Page() {
 <p className="text-on-surface-variant text-sm mt-auto italic">Welcome week for the Batch of 2028.</p>
 </div>
 </div>
+</div>
+</div>
+</section>
+{/* Application Form Section */}
+<section className="py-24 bg-surface" id="apply-form">
+<div className="max-w-screen-2xl mx-auto px-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<span className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-xs tracking-widest uppercase mb-6">
+Online Application
+</span>
+<h2 className="font-headline font-extrabold text-4xl text-primary tracking-tight mb-6">
+Start Your Application
+</h2>
+<p className="text-on-surface-variant text-lg leading-relaxed mb-8">
+Take the first step towards your future at Namal University. Complete the form and our admissions team will review your application within 5-7 business days.
+</p>
+<div className="space-y-6">
+<div className="flex items-start gap-4 p-6 rounded-xl bg-surface-container-low">
+<span className="material-symbols-outlined text-secondary text-3xl mt-1">verified</span>
+<div>
+<h4 className="font-headline font-bold text-primary mb-1">Quick Review</h4>
+<p className="text-on-surface-variant text-sm">Applications are reviewed within 5-7 business days.</p>
+</div>
+</div>
+<div className="flex items-start gap-4 p-6 rounded-xl bg-surface-container-low">
+<span className="material-symbols-outlined text-secondary text-3xl mt-1">support_agent</span>
+<div>
+<h4 className="font-headline font-bold text-primary mb-1">Dedicated Support</h4>
+<p className="text-on-surface-variant text-sm">Our admissions counselors are here to help at every step.</p>
+</div>
+</div>
+<div className="flex items-start gap-4 p-6 rounded-xl bg-surface-container-low">
+<span className="material-symbols-outlined text-secondary text-3xl mt-1">school</span>
+<div>
+<h4 className="font-headline font-bold text-primary mb-1">Merit-Based Scholarships</h4>
+<p className="text-on-surface-variant text-sm">Top applicants are automatically considered for financial aid.</p>
+</div>
+</div>
+</div>
+</div>
+<ApplicationForm />
 </div>
 </div>
 </section>
