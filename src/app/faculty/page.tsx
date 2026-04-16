@@ -100,15 +100,15 @@ export default async function Page() {
 
   return (
     <>
-<main className="pt-32 pb-24 px-12 max-w-[1920px] mx-auto">
+<main className="pt-20 md:pt-32 pb-16 md:pb-24 px-4 md:px-8 lg:px-12 max-w-[1920px] mx-auto">
 {/* Hero Section: Editorial Header */}
-<header className="editorial-grid mb-24">
+<header className="editorial-grid mb-12 md:mb-24">
 <div className="col-span-8 lg:col-span-7">
 <span className="text-secondary font-headline font-extrabold uppercase tracking-[0.2em] text-xs mb-4 block">Distinguished Minds</span>
-<h1 className="text-primary font-headline text-7xl font-extrabold tracking-tighter leading-none mb-8">
+<h1 className="text-primary font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-none mb-6 md:mb-8">
                     Our <span className="italic font-light">Faculty</span> &amp; Mentors.
                 </h1>
-<p className="text-on-surface-variant text-xl max-w-2xl leading-relaxed">
+<p className="text-on-surface-variant text-base md:text-xl max-w-2xl leading-relaxed">
                     A community of scholars, researchers, and practitioners dedicated to shaping the next generation of leaders through intellectual rigor and ethical grounding.
                 </p>
 </div>
@@ -130,21 +130,21 @@ export default async function Page() {
 <FacultyGrid facultyData={serializedFaculty} />
 
 {/* Join the Faculty CTA */}
-<section className="mt-24 editorial-grid">
-<div className="col-span-12 lg:col-span-12 bg-primary py-20 px-12 rounded-xl relative overflow-hidden flex flex-col items-center text-center">
+<section className="mt-12 md:mt-24 editorial-grid">
+<div className="col-span-12 lg:col-span-12 bg-primary py-12 md:py-20 px-6 md:px-12 rounded-xl relative overflow-hidden flex flex-col items-center text-center">
 <div className="absolute inset-0 opacity-10">
 <div className="absolute top-0 right-0 w-[500px] h-[500px] border-[40px] border-secondary-container rounded-full translate-x-1/2 -translate-y-1/2"></div>
 </div>
 <div className="relative z-10 max-w-3xl">
-<h2 className="text-on-primary font-headline text-5xl font-extrabold tracking-tighter mb-6">Shape the Future of <br/>Knowledge with Us.</h2>
-<p className="text-primary-fixed-dim text-lg mb-10 leading-relaxed">
+<h2 className="text-on-primary font-headline text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter mb-4 md:mb-6">Shape the Future of <br/>Knowledge with Us.</h2>
+<p className="text-primary-fixed-dim text-sm md:text-lg mb-6 md:mb-10 leading-relaxed">
                         We are always seeking visionary educators and researchers to join our world-class faculty. Explore open positions and research fellowships.
                     </p>
-<div className="flex flex-wrap justify-center gap-4">
-<Link href="/careers" className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:scale-105 transition-transform flex items-center justify-center">
+<div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+<Link href="/careers" className="bg-secondary-container text-on-secondary-container px-6 md:px-10 py-3.5 md:py-4 rounded-xl font-headline font-bold uppercase text-xs md:text-sm tracking-[0.1em] hover:scale-105 transition-transform flex items-center justify-center">
                             View Open Roles
                         </Link>
-<Link href="/research/fellowship" className="border border-outline-variant text-on-primary px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:bg-on-primary/10 transition-colors flex items-center justify-center">
+<Link href="/research/fellowship" className="border border-outline-variant text-on-primary px-6 md:px-10 py-3.5 md:py-4 rounded-xl font-headline font-bold uppercase text-xs md:text-sm tracking-[0.1em] hover:bg-on-primary/10 transition-colors flex items-center justify-center">
                             Research Fellows
                         </Link>
 </div>
